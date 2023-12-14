@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//O arquivo index.js é o ponto de entrada da aplicação no nível do JavaScript.
+//É onde o React é utilizado para renderizar o componente principal (App) na DOM.
+//Além disso, o React.StrictMode é envolvido em torno do App para detectar
+// possíveis problemas na sua aplicação durante o desenvolvimento.
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import React from 'react'; //importa a biblioteca React.
+import ReactDOM from 'react-dom/client'; //importa a API ReactDOM.
+import './index.css'; //importa o arquivo de estilos CSS associado ao componente App.
+import App from './App'; //importa o componente App (o principal da aplicação) do arquivo App.js.
+
+const root = ReactDOM.createRoot(document.getElementById('root')); //Cria na constante "root" a raiz React através da função createRoot.
+
+// Renderiza o componente principal (App) dentro do elemento do DOM especificado a raiz da aplicação React.
+// Utiliza o modo rigoroso (StrictMode) para destacar práticas desencorajadas e detectar problemas potenciais.
+root.render( 
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

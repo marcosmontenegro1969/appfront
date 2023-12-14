@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+body {
+  background-color: #9f9da7;   /* Define a cor de fundo do corpo da página como um tom de cinza */
+  font-size: 1.6rem; /*Define o tamanho da fonte para o corpo da página como 1.6 rem*/
+  font-family: "Open Sans", sans-serif; /*Define "Open Sans" como família preferencial de fontes para o corpo da página.
+  Se não estiver disponível, será usada qualquer fonte sans-serif genérica.*/
+  color: #2b3e51; /*Define a cor do texto do corpo como um tom de azul escuro*/
+  background-image: url("./components/Identidade_Visual/header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* h2 {
+  font-weight: 300; /*Define a espessura da fonte do elemento <h2> em 300 (fonte leve ou fina).*/
+  /* text-align: center; Define o alinhamento do texto dentro do <h2> como centralizado horizontalmente. */
+/* } */
+
+.container_Formulario_Login {
+  background-color: rgba(255, 255, 255, 0.3); /* Define a cor de fundo do contêiner como um tom de branco transparente*/
+  width: 70%; /*Estabelece a largura do contêiner como 70% do elemento pai*/
+  max-width: 400px; /*Define a largura máxima do contêiner como 400 pixels*/
+  margin: 100px auto; /*Adiciona margem de 100 pixels nas laterais/acima/abaixo, centralizando o contêiner horizontalmente*/
+  text-align: center; /*Alinha o texto dentro do container no centro*/
+  padding: 15px 0; /*Adiciona preenchimento interno de 15 pixels acima e abaixo do contêiner*/
+  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2); /*Adiciona uma sombra ao redor do contêiner para dar uma elevação
+  visual, simulando um efeito de profundidade*/
+  position: absolute;
+  top: 50%;
+  left: 19%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.horizontalRectangle1 {
+  position: absolute;
+  top: 4px;
+  left: 1%;
+  width: 27%;
+  height: 45px; /* Ajuste a altura conforme necessário */
+  background-color: #023859;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.horizontalRectangle2 {
+  position: absolute;
+  top: 4px;
+  left: 28%;
+  width: 71%;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex; /* Adiciona flex container */
+  align-items: center; /* Centraliza verticalmente os filhos dentro do container flex */
+}
+
+.loginText {
+  margin: 0 auto; /* Centraliza horizontalmente o texto */
+  color: #000; /* Cor do texto (opcional, ajuste conforme necessário) */
+}
+
+
+.formulario_Login {
+  padding: 0 5px; /*Preenche com 0 pixels acima/abaixo e 60 pixels nos lados do formulário de login. Isso cria
+  um espaçamento interno no formulário, proporcionando um espaço uniforme entre as bordas internas do formulário
+  e seu conteúdo.*/
+}
+
+label {
+  font-size: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*Estilos CSS para qualquer campo input*/
+input {
+
+  /* Posicionamento e Modelo de Caixa */
+  position: relative; /*Define a posição dos inputs como relativa, para poder alterar a sua posição em relação à
+  sua posição original no layout normal do documento*/
+  display: inline-block; /*Define o elemento como um bloco em linha*/
+  box-sizing: border-box; /*Define a caixa do input incluindo largura e altura. Se alterar width e height no CSS,
+  incluirão conteúdo, preenchimento e bordas do elemento, e excluirão margens, facilianto o dimensionamento do elemento*/
+  height: 45px; /*Define 60 pixels para altura do campo input.*/
+  padding: 0 0 0 10px; /*Adiciona um de 10px acima e abaixo do campo para espaçamento */
+  border: none; /*Remove a borda do campo*/
+  
+
+  /* Tipografia */
+  font-style: normal; /*Define o estilo da fonte como normal*/
+  font-size: 24px; /*Define o tamanho da fonte para 16 pixels*/
+  line-height: 60px; /*Define 60px também para a altura da linha de digitação, o que centraliza o texto verticalmente.*/
+  color: black; /*Define a cor do texto como preto*/
+
+  /* Cores e Fundos */
+  background: none; /*Remove o fundo padrão do campo*/
+  background-color: rgba(255, 255, 255, 0.4); /*Define a cor de fundo do campo como um tom de branco transparente*/
+
+  /* Outras Propriedades */
+  outline: none; /*Remove a borda de contorno ao receber foco, melhorando a aparência visual.*/
+  appearance: none; /*Remove a aparência padrão do campo definida pelo navegador ou sistema operacional, 
+  para poder utilizar estilos personalizados neste elemento*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+
+  margin: 90px 0px 10px 30px; /*define uma margem de 10px na direção vertical (acima e abaixo) e 0px na horizontal (esq e direita).*/
+  width: 72%; /*Define a largura em 100% da largura do contêiner pai, fazendo com que ocupe toda a largura disponível.*/
+}
+
+input[type="password"] {
+  margin: 0px 0px 10px 25px; /*define uma margem de 10px na direção vertical (acima e abaixo) e 0px na horizontal (esq e direita).*/
+  width: 72%; /*Define a largura em 100% da largura do contêiner pai, fazendo com que ocupe toda a largura disponível.*/
+}
+
+
+/*Estilos CSS para os campos input do tipo "password" e "email" quando receberem o foco*/
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #3ca9e2; /*Define a cor da borda quando o campo estiver em foco num tom de azul.*/
+}
+
+.btn-login {
+
+  /* Posicionamento e Modelo de Caixa */
+  border: none; /*Remove a borda do botão.*/
+  border-radius: 30px; /*Adiciona bordas arredondadas ao botão com um raio de 30 pixels.*/
+  display: inline-block; /*Define o botão como um bloco de nível, mas mantendo a disposição inline. Isso permite
+  que o botão ocupe toda a largura, mas ainda permita que outros elementos estejam ao lado dele.*/
+  width: 50%; /*Faz com que o botão ocupe 100% da largura disponível dentro do contêiner pai.*/
+  padding: 10px 0px; /*Adiciona preenchimento interno de 20 pixels ao redor do texto do botão.*/
+  position: relative; /*Define a posição do botão como relativa, para poder alterar a sua posição em relação à
+  sua posição original no layout normal do documento*/
+  margin-top: 5px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+
+
+  /* Cores e Fundos */
+  background-color: #03588C; /*Define a cor de fundo do botão num tom de azul. Esta será a cor de fundo padrão
+  quando o botão não está em estado de hover ou foco.*/
+  color: #fff; /*Define a cor do texto do botão como branco*/
+  
+  /* Tipografia */
+  font-weight: bold; /*Deixa o texto do botão em negrito.*/
+  text-transform: uppercase; /*Converte todo o texto do botão para maiúsculas.*/
+  font-size: 18px; /*Define o tamanho da fonte como 18 pixels.*/
+  text-align: center; /*Centraliza o texto dentro do botão.*/
+
+  /* Efeitos e Interatividade */
+  cursor: pointer; /*Muda o cursor para a forma de mão ao passar sobre o botão, indicando que é interativo.*/
+  transition: all 0.2s ease; /*Aplica uma transição suave a todas as propriedades (all) do botão durante um período
+  de 0.2 segundos, usando a função "ease", (inicia devagar, acelera no meio e desacelere no final).*/
+  
+  /* Margens */
+  margin-bottom: 10px; /*Adiciona margens inferior ao botão de 30px.*/
+  margin-top: 10px; /*Adiciona margens superior ao botão de 10px.*/
+}
+
+/*Estilos CSS para o botão quando o mouse estiver passando por ele (hover)*/
+.btn-login:hover {
+  background-color: #329dd5; /*Muda a cor de fundo do botão para um tom azul quando o usuário passa o mouse sobre ele*/
+  transition: all 0.2s ease; /* Define uma transição suave de 0.2 segundos para todas as propriedades CSS do botão.
+  Em resumo, quando o estado hover é ativado, a mudança de cor de fundo será suavizada ao longo de 0.2 segundos,
+  proporcionando uma transição visual agradável.*/
+}
+
+p {
+  font-size: 30px; /*Define o tamanho da fonte para 14 pixels*/
+  color: #0f36ab; /*Define a cor do texto para um tom de cinza*/
+  margin-bottom: 30px; /*Adiciona margens inferior ao botão de 30px.*/
+}
+
+#div_Logado {
+  height: auto;
+  margin: 20px; /*Adiciona margem de 30 pixels nas laterais/acima/abaixo, centralizando o contêiner horizontalmente*/
+}
+
+.btn_Logado {
+  /* Modelo de Caixa */
+  border: none; /*Remove a borda do botão.*/
+  display: inline-block; /*Define o botão como um bloco de nível, mas mantendo a disposição inline. Isso permite
+  que o botão ocupe toda a largura, mas ainda permita que outros elementos estejam ao lado dele.*/
+
+  width: 50%; /*Faz com que o botão ocupe 100% da largura disponível dentro do contêiner pai.*/
+  padding: 20px; /*Adiciona preenchimento interno de 20 pixels ao redor do texto do botão.*/
+  position: relative; /*Define a posição do botão como relativa, para poder alterar a sua posição em relação à
+  sua posição original no layout normal do documento*/
+
+  /* Cores e Fundos */
+  background-color: #3ca9e2; /*Define a cor de fundo do botão num tom de azul. Esta será a cor de fundo padrão
+  quando o botão não está em estado de hover ou foco.*/
+  color: #fff; /*Define a cor do texto do botão como branco*/
+  
+  /* Tipografia */
+  font-weight: bold; /*Deixa o texto do botão em negrito.*/
+  text-transform: uppercase; /*Converte todo o texto do botão para maiúsculas.*/
+  font-size: 18px; /*Define o tamanho da fonte como 18 pixels.*/
+  text-align: center; /*Centraliza o texto dentro do botão.*/
+
+  /* Efeitos e Interatividade */
+  cursor: pointer; /*Muda o cursor para a forma de mão ao passar sobre o botão, indicando que é interativo.*/
+  transition: all 0.2s ease; /*Aplica uma transição suave a todas as propriedades (all) do botão durante um período
+  de 0.2 segundos, usando a função "ease", (inicia devagar, acelera no meio e desacelere no final).*/
+  
+  /* Margens */
+  margin-bottom: 30px; /*Adiciona margens inferior ao botão de 30px.*/
+  margin-top: 10px; /*Adiciona margens superior ao botão de 10px.*/
 }

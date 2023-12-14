@@ -1,13 +1,18 @@
+/*Este arquivo é criado de forma padrão pelo create-react-app, ele contém estilos
+CSS globais que afetam elementos do corpo (body) da página HTML. são comuns em
+projetos React para garantir uma boa aparência em diferentes navegadores e 
+sistemas operacionais. */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  margin: 0; /*Remove as margens padrão do corpo */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', /*Define uma família de fontes genérica para o corpo da página. */
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /*melhora a renderização de fontes suavizando as bordas no Chrome e no Safari.*/
+  -moz-osx-font-smoothing: grayscale; /*melhora a renderização de fontes suavizando as bordas no Firefox.*/
 }
 
-code {
+code { /*Define uma família de fontes específica para elementos do tipo 'code' (código).*/
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
